@@ -1,4 +1,5 @@
 <!--
+<<<<<<< HEAD
  * @Author: your name
  * @Date: 2019-11-07 20:30:55
  * @LastEditTime: 2019-11-13 14:52:15
@@ -7,6 +8,14 @@
  * @FilePath: \第三阶段\work\meituanwaimai\src\App.vue
  -->
 
+=======
+ * @Author: 马川
+ * @Date: 2019-11-06 20:31:09
+ * @LastEditors: 马川
+ * @LastEditTime: 2019-11-12 11:21:55
+ * @Description: 
+ -->
+>>>>>>> machuan
 <template>
   <div id="app">
     <router-view/>
@@ -28,6 +37,7 @@ html{
   font-size: 26.67vw;
 }
 body{
+<<<<<<< HEAD
   font-size: 14px;
   height: 100%;
   background-color: #f4f4f4;
@@ -36,16 +46,22 @@ body{
   width: 100%;
   background-color: #f4f4f4;
   border-radius: 10px;
+=======
+  font-size: 15px;
+>>>>>>> machuan
 }
 ul,li{
   list-style: none;
 }
 a{
   text-decoration: none;
+<<<<<<< HEAD
   color:#333;
   display: block;
 }
 em,i{
   font-style: normal;
+=======
+>>>>>>> machuan
 }
 </style>

@@ -1,8 +1,15 @@
 {
+<<<<<<< HEAD
   "name": "meituanwaimai",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "guo tao <960345142@qq.com>",
+=======
+  "name": "shopapp",
+  "version": "1.0.0",
+  "description": "A Vue.js project",
+  "author": "mac <1412518057@qq.com>",
+>>>>>>> machuan
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -14,11 +21,20 @@
   },
   "dependencies": {
     "element-ui": "^2.12.0",
+<<<<<<< HEAD
+=======
+    "mint-ui": "^2.2.13",
+    "swiper": "^5.2.0",
+>>>>>>> machuan
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
+<<<<<<< HEAD
+=======
+    "axios": "^0.19.0",
+>>>>>>> machuan
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-jest": "^21.0.2",

@@ -1,8 +1,15 @@
 /*
+<<<<<<< HEAD
  * @Author: 郭涛
  * @Date: 2019-11-07 20:30:55
  * @LastEditors: 郭涛
  * @LastEditTime: 2019-11-14 17:55:33
+=======
+ * @Author: 马川
+ * @Date: 2019-11-06 20:31:09
+ * @LastEditors: 马川
+ * @LastEditTime: 2019-11-14 09:43:37
+>>>>>>> machuan
  * @Description: 
  */
 'use strict'

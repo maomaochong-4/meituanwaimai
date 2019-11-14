@@ -1,4 +1,5 @@
 <!--
+<<<<<<< HEAD
  * @Author: your name
  * @Date: 2019-11-11 17:27:41
  * @LastEditTime: 2019-11-11 20:03:50
@@ -7,12 +8,24 @@
  * @FilePath: \第三阶段\work\meituanwaimai\src\components\Footer.vue
  -->
 
+=======
+ * @Author: 马川
+ * @Date: 2019-11-06 20:41:40
+ * @LastEditors: 马川
+ * @LastEditTime: 2019-11-11 14:09:33
+ * @Description: "导航栏"
+ -->
+>>>>>>> machuan
 <template>
   <div class="box">
       <footer>
            <ul>
             <li>
+<<<<<<< HEAD
               <i class="el-icon-s-home"></i>
+=======
+              <i class="el-icon-s-home mac"></i>
+>>>>>>> machuan
               <span>首页</span>
             </li>
             <li>
@@ -20,8 +33,13 @@
               <span>会员</span>
             </li>
             <li>
+<<<<<<< HEAD
               <i class="el-icon-tickets mac"></i>
               <span class="spanhh">订单</span>
+=======
+              <i class="el-icon-tickets"></i>
+              <span>订单</span>
+>>>>>>> machuan
             </li>
             <li>
               <i class="el-icon-user"></i>
@@ -72,9 +90,13 @@ i{
   display: block;
 }
 .mac{
+<<<<<<< HEAD
     color: #fdb934;
 }
 .spanhh{
   color:#fdb934;
+=======
+    color: #fdb934
+>>>>>>> machuan
 }
 </style>

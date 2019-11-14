@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 <<<<<<< HEAD
  * @Author: 郭涛
@@ -12,6 +13,8 @@
 >>>>>>> machuan
  * @Description: 
  */
+=======
+>>>>>>> sijuan
 'use strict'
 // Template version: 1.3.1
 // see http://vuejs-templates.github.io/webpack for documentation.
@@ -24,6 +27,7 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+<<<<<<< HEAD
     proxyTable: {
       '/api': {
         target: 'http://localhost:3000',
@@ -33,6 +37,9 @@ module.exports = {
         }
       }
     },
+=======
+    proxyTable: {},
+>>>>>>> sijuan
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

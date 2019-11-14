@@ -1,0 +1,61 @@
+<!--
+ * @Author: your name
+ * @Date: 2019-11-11 16:52:13
+ * @LastEditTime: 2019-11-11 17:40:56
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \third-staged:\ruanjian\work\meituanwaimai\src\components\Denglu.vue
+ -->
+<template>
+  <div class="box">
+      <img src="../assets/img/touxiang.png" alt="">
+      <span class="title">登录/注册</span>
+      <div class="a1">
+          <i class="iconfont icon-shezhi"></i>
+          <i class="iconfont icon-ziyuan"></i>
+      </div>
+  </div>
+</template>
+<script>
+export default {
+  name: 'Denglu',
+  data () {
+    return {
+      
+    }
+  },
+  methods:{
+     
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.box{
+  width: 100%;
+  height: 1.01rem;
+  background: #fefefe;
+  display: flex;
+  align-items: center;
+}
+.box img{
+    width: .52rem;
+    height: .52rem;
+    margin: 0 2%;
+}
+.title{
+    color: #333333;
+    font-size: .2rem;
+}
+.a1{
+    margin-left: 1.32rem;
+}
+.iconfont{
+    font-size: .2rem;
+    color: #33312d;
+}
+.icon-ziyuan{
+   margin-left: .28rem;
+}
+</style>

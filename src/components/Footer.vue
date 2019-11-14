@@ -1,12 +1,19 @@
 <!--
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @Author: your name
  * @Date: 2019-11-11 17:27:41
  * @LastEditTime: 2019-11-11 20:03:50
+=======
+ * @Author: your name
+ * @Date: 2019-11-11 17:27:41
+ * @LastEditTime: 2019-11-11 21:38:57
+>>>>>>> sijuan
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \第三阶段\work\meituanwaimai\src\components\Footer.vue
  -->
+<<<<<<< HEAD
 
 =======
  * @Author: 马川
@@ -16,16 +23,22 @@
  * @Description: "导航栏"
  -->
 >>>>>>> machuan
+=======
+>>>>>>> sijuan
 <template>
   <div class="box">
       <footer>
            <ul>
             <li>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <i class="el-icon-s-home"></i>
 =======
               <i class="el-icon-s-home mac"></i>
 >>>>>>> machuan
+=======
+              <i class="el-icon-s-home"></i>
+>>>>>>> sijuan
               <span>首页</span>
             </li>
             <li>
@@ -33,6 +46,7 @@
               <span>会员</span>
             </li>
             <li>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <i class="el-icon-tickets mac"></i>
               <span class="spanhh">订单</span>
@@ -44,11 +58,22 @@
             <li>
               <i class="el-icon-user"></i>
               <span>我的</span>
+=======
+              <i class="el-icon-tickets mac"></i>
+              <span>订单</span>
+            </li>
+            <li>
+              <i class="el-icon-user"></i>
+              <span class="spanhh">我的</span>
+>>>>>>> sijuan
             </li>
         </ul> 
       </footer>
   </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> sijuan
 </template>
 
 <script>
@@ -68,7 +93,11 @@ footer{
     background: white;
     width: 100%;
     position: fixed;
+<<<<<<< HEAD
     bottom: 0
+=======
+    bottom: 0;
+>>>>>>> sijuan
 }
 ul{
     display: flex;
@@ -89,14 +118,21 @@ i{
   color:#999999;
   display: block;
 }
+<<<<<<< HEAD
 .mac{
 <<<<<<< HEAD
+=======
+.el-icon-user{
+>>>>>>> sijuan
     color: #fdb934;
 }
 .spanhh{
   color:#fdb934;
+<<<<<<< HEAD
 =======
     color: #fdb934
 >>>>>>> machuan
+=======
+>>>>>>> sijuan
 }
 </style>

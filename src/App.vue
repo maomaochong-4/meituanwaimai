@@ -1,5 +1,6 @@
 <!--
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @Author: your name
  * @Date: 2019-11-07 20:30:55
  * @LastEditTime: 2019-11-13 14:52:15
@@ -16,6 +17,15 @@
  * @Description: 
  -->
 >>>>>>> machuan
+=======
+ * @Author: your name
+ * @Date: 2019-11-04 18:15:56
+ * @LastEditTime: 2019-11-11 20:14:18
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \third-staged:\ruanjian\work\meituanwaimai\src\App.vue
+ -->
+>>>>>>> sijuan
 <template>
   <div id="app">
     <router-view/>
@@ -38,6 +48,7 @@ html{
 }
 body{
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-size: 14px;
   height: 100%;
   background-color: #f4f4f4;
@@ -49,6 +60,10 @@ body{
 =======
   font-size: 15px;
 >>>>>>> machuan
+=======
+  font-size: 14px;
+  height: 100%;
+>>>>>>> sijuan
 }
 ul,li{
   list-style: none;
@@ -56,12 +71,18 @@ ul,li{
 a{
   text-decoration: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> sijuan
   color:#333;
   display: block;
 }
 em,i{
   font-style: normal;
+<<<<<<< HEAD
 =======
 >>>>>>> machuan
+=======
+>>>>>>> sijuan
 }
 </style>

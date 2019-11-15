@@ -1,8 +1,8 @@
 /*
  * @Author: 郭涛
  * @Date: 2019-11-14 19:34:12
- * @LastEditors: 郭涛
- * @LastEditTime: 2019-11-14 20:20:51
+ * @LastEditors: 马川
+ * @LastEditTime: 2019-11-15 10:17:03
  * @Description: 
  */
 // <<<<<<< HEAD
@@ -37,7 +37,7 @@ module.exports = {
 // <<<<<<< HEAD
     proxyTable: {
       '/api': {
-        target: 'http://localhost:3000',
+        target:'http://localhost:3000',
         changeOrigin: true,
         pathRewrite: {
          	 '^/api': ''
@@ -45,12 +45,11 @@ module.exports = {
       }
     },
 // =======
-    proxyTable: {},
 // >>>>>>> sijuan
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 8081, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,

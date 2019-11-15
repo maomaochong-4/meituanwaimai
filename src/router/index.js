@@ -1,8 +1,8 @@
 /*
  * @Author: 郭涛
  * @Date: 2019-11-14 19:34:12
- * @LastEditors: 郭涛
- * @LastEditTime: 2019-11-14 20:18:34
+ * @LastEditors: 马川
+ * @LastEditTime: 2019-11-15 14:19:32
  * @Description: 
  */
 
@@ -25,6 +25,7 @@ import GoodsList from '@/pages/GoodsList'
 import huiyuan from '@/pages/huiyuan'
 import xiangqingye from '@/pages/xiangqingye'
 
+import huiyuansouwei from '@/pages/huiyuansouwei'
 
 Vue.use(Router)
 
@@ -44,10 +45,6 @@ let router= new Router({
       path: '/Sousuoye',
       name: 'Sousuoye',
       component: Sousuoye,
-      
-      meta:{
-        requireAuth:true
-      }
     },
     {
       path: '/liebiao',
@@ -57,7 +54,10 @@ let router= new Router({
     {
       path: '/dindan',
       name: 'dindan',
-      component: dindan
+      component: dindan,
+       meta:{
+        requireAuth:true
+      }
     },
     {
       path: '/GoodsList',
@@ -67,7 +67,10 @@ let router= new Router({
     {
       path: '/huiyuan',
       name: 'huiyuan',
-      component: huiyuan
+      component: huiyuan,
+       meta:{
+        requireAuth:true
+      }
     },
     {
       path: '/xiangqingye',
@@ -78,15 +81,16 @@ let router= new Router({
       path: '/Fenleim',
       name: 'Fenleim',
       component: Fenleim,
-        
-      // meta:{
-      //   requireAuth:true
-      // }
     },
     {
       path: '/jiesuanyemian',
       name: 'jiesuanyemian',
       component: jiesuanyemian
+    },
+    {
+      path: '/huiyuansouwei',
+      name: 'huiyuansouwei',
+      component: huiyuansouwei
     },
     {
       path: '/ShoppingCarPage',
@@ -141,9 +145,7 @@ router.beforeEach((to,from,next)=>{
       console.log('前置守卫');
       console.log(localStorage.getItem('username'));
       if(localStorage.getItem('username')==null){
-          next(false);
-          // console.log("to.fullPath:"+to.fullPath);
-          // next('/LoginPage'+to.fullPath);
+          next('/ZujianPage');
       }else{
           next();
       }

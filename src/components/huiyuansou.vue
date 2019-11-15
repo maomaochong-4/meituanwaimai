@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-13 11:11:29
- * @LastEditTime: 2019-11-15 11:56:13
+ * @LastEditTime: 2019-11-15 14:00:09
  * @LastEditors: 马川
  * @Description: In User Settings Edit
  * @FilePath: \third-staged:\ruanjian\work\meituanwaimai\src\components\Zujian.vue
@@ -9,7 +9,7 @@
 <template>
   <div class="box">
        <div class="top">
-           <span>订单</span>
+           <span>会员</span>
            <i class="el-icon-bell"></i>
         </div>
         <div class="middle">

@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-12 19:02:45
- * @LastEditTime: 2019-11-14 17:31:16
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2019-11-15 11:12:26
+ * @LastEditors: 马川
  * @Description: In User Settings Edit
  * @FilePath: \third-staged:\ruanjian\work\meituanwaimai\src\components\Register.vue
  -->
@@ -30,7 +30,7 @@
                 <button type="button" class="btn-block" @click="register">注册</button>
             </div>
             <div class="huan">
-                <span>去登录</span>
+                <router-link to="/LoadPage"><span>去登录</span></router-link>
                 <em>遇到问题</em>
             </div>    
         </div>       

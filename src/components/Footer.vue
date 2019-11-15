@@ -1,8 +1,8 @@
 <!--
  * @Author: 郭涛
  * @Date: 2019-11-14 19:34:12
- * @LastEditors: 郭涛
- * @LastEditTime: 2019-11-14 21:07:19
+ * @LastEditors: 马川
+ * @LastEditTime: 2019-11-15 14:28:07
  * @Description: 
  -->
 <template>
@@ -10,20 +10,36 @@
       <footer>
            <ul>
             <li>
-              <i class="el-icon-s-home"></i>
-              <span>首页</span>
+              <router-link to="/">
+                <div :class="{'yellow':footerCls[0]}"  @touchstart="changeCls(0)">
+                  <i class="el-icon-s-home"></i>
+                  <span>首页</span>
+                </div>
+              </router-link>
             </li>
             <li>
-              <i class="el-icon-thumb"></i>
-              <span>会员</span>
+              <router-link to="/huiyuan">
+              <div :class="{'yellow':footerCls[1]}"  @touchstart="changeCls(1)">
+                  <i class="el-icon-thumb"></i>
+                  <span>会员</span>
+               </div>
+              </router-link>
             </li>
             <li>
-              <i class="el-icon-tickets mac"></i>
-              <span class="spanhh">订单</span>
+              <router-link to="/dindan">
+              <div :class="{'yellow':footerCls[2]}"  @touchstart="changeCls(2)">
+                  <i class="el-icon-tickets mac"></i>
+                  <span class="spanhh">订单</span>
+               </div>
+              </router-link>
             </li>
             <li>
-              <i class="el-icon-user"></i>
-              <span>我的</span>
+              <router-link to="/MinePage">
+              <div :class="{'yellow':footerCls[3]}"  @touchstart="changeCls(3)">
+                  <i class="el-icon-user"></i>
+                  <span>我的</span>
+               </div>
+              </router-link>
             </li>
         </ul> 
       </footer>
@@ -33,11 +49,23 @@
 
 <script>
 export default {
-  name: 'top',
-  data () {
-    return {
+ name: 'Footer',
+    data() {
+        return {
+            foots: [],
+            
+        }
+    },
+    computed: {
+        footerCls(){
+            return this.$store.state.footerCls;
+        }
+    },
+    methods:{
+        changeCls(Index){
+            this.$store.commit('changeFooterCls',Index)
+        }
     }
-  }
 }
 </script>
 
@@ -69,10 +97,18 @@ i{
   color:#999999;
   display: block;
 }
-.mac{
+/* .mac{
     color: #fdb934;
 }
 .spanhh{
+  color:#fdb934;
+} */
+.yellow span{
+    
+  color:#fdb934;
+}
+.yellow i{
+  
   color:#fdb934;
 }
 </style>

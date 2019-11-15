@@ -40,7 +40,7 @@ export default {
   },
    
   created(){
-    fetch(' /api/dindans')
+    fetch('/api/dindans')
       .then(res=>{
         return res.json();
       })

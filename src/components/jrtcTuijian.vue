@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-09 17:43:44
- * @LastEditTime: 2019-11-14 10:51:10
+ * @LastEditTime: 2019-11-15 09:55:06
  * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \第三阶段\work\meituanwaimai\src\components\jrtcTuijian.vue
@@ -509,9 +509,11 @@ export default {
   },
    
   created(){
-    fetch(' /api/taocan')
+    fetch('/api/taocan')
       .then(res=>{
         return res.json();
+        
+         console.log(res.json())
       })
       .then(data=>{
          this.tuijians=data;

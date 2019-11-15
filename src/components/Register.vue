@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-12 19:02:45
- * @LastEditTime: 2019-11-15 11:12:26
- * @LastEditors: 马川
+ * @LastEditTime: 2019-11-15 15:27:15
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \third-staged:\ruanjian\work\meituanwaimai\src\components\Register.vue
  -->
@@ -37,6 +37,8 @@
   </div>
 </template>
 <script>
+    import axios from 'axios';
+    import { Toast } from 'mint-ui';
 export default {
   name: 'Register',
   data () {
@@ -49,11 +51,29 @@ export default {
   },
   methods:{
      register(){
-         if(this.userPhone==""){
-           alert("手机号不能为空")
+        var r=/[1][3,4,5,6,7,8,9][0-9]{9}$/;
+        var res=/^[a-zA-Z_]\w{5,10}$/;
+         if(this.userPhone=="" || this.password=="" || this.username=="" || this.relpass==""){
+           Toast("内容不能为空");
+        }else if(!r.test(this.userPhone)){
+            Toast("请输入正确的手机号");
+        }else if(!res.test(this.username)){
+            Toast("用户名为6~11位，且开头不能为数字");
+        }else if(!res.test(this.password)){
+            Toast("密码为6~11位，且开头不能为数字");
+        }else if(this.password !=this.relpass){
+            Toast("两次密码输入不一致");
+        }else{
+            axios.get('/user/zhu?uname='+this.username+'&phone='+this.userPhone+'&upass='+this.password)
+            .then(res=>{
+                console.log(res.data);    
+            })
+            .catch(err=>{
+                console.log(err);
+            })
+        }
          }
      }
-  }
 }
 </script>
 

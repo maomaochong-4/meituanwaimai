@@ -16,29 +16,47 @@
                 <el-input placeholder="请确认密码" v-model="relpass" clearable show-password></el-input>
             </p>
             <div class="btn1">
-                <input type="button" value="修改">
+                <input type="button" value="修改" @touchstart="modify">
             </div>
             <div class="huan">
                 <router-link to="/LoadPage"><span>去登录</span></router-link>
                 <em>遇到问题</em>
             </div>    
-        </div>       
+        </div>         
   </div>
 </template>
 <script>
+import axios from 'axios';
+import { Toast } from 'mint-ui';
 export default {
   name: 'Forget',
   data () {
     return {
       userPhone:'',
       password:'',
-      relpass:'',
+      relpass:''
     }
   },
   methods:{
-     registerCheck(){
-         
-     }
+    modify(){
+        var res=/^[a-zA-Z_]\w{5,10}$/;
+        localStorage.setItem('username',this.username);
+        if(this.username=="" || this.password==""){
+            Toast('手机号或密码不能为空');
+        }else if(!res.test(this.password)){
+            Toast("密码为6~11位，且开头不能为数字");
+        }else if(this.password !=this.relpass){
+            Toast("两次密码输入不一致");
+        }else{
+            axios.get('denglu?uname='+this.username+'&upass='+this.password)
+            .then(res=>{
+                console.log(res.data);    
+            })
+            .catch(err=>{
+                console.log(err);
+            })
+        }
+    }
   }
 }
 </script>

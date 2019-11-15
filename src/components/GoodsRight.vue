@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-11 17:54:43
- * @LastEditTime: 2019-11-14 10:50:48
+ * @LastEditTime: 2019-11-15 19:06:14
  * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \第三阶段\work\meituanwaimai\src\components\GoodsRight.vue
@@ -12,12 +12,12 @@
            <ul>
                 <li v-for="(caiming,index) in caimings" :key="index">
                     <router-link class="link" to="/xiangqingye">
-                        <img :src="caiming.img" alt="">
+                        <img :src="caiming.dpic" alt="">
                         <div class="moll">
-                            <h4>{{caiming.name}}</h4>
-                            <p class="ggg">{{caiming.kouwei}}</p>
-                            <p>月售<span>{{caiming.yueshou}} | </span>好评度{{caiming.haopingdu}}</p>
-                            <span class="mony">￥{{caiming.jiage}}</span>
+                            <h4>{{caiming.dveg}}</h4>
+                            <p class="ggg">麻辣的，香辣的，五香的，应有尽有</p>
+                            <p>月售<span>{{caiming.dmon}} | </span>好评度{{caiming.dgood}}</p>
+                            <span class="mony">￥{{caiming.beia}}</span>
                             <img class="add" src="../assets/img/add.png" alt="">
                         </div>
                     </router-link>
@@ -36,7 +36,7 @@ export default {
   },
    
   created(){
-    fetch('/api/caimings')
+    fetch('/api/shop/cha?sid=1')
       .then(res=>{
         return res.json();
       })
@@ -54,7 +54,6 @@ export default {
 <style scoped>
    .Goods_right{
        width: 73%;
-       height: 10rem;
        clear: both;
    }
    ul{

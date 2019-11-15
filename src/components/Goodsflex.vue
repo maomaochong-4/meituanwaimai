@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-11 17:54:43
- * @LastEditTime: 2019-11-14 10:50:13
+ * @LastEditTime: 2019-11-15 22:27:25
  * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \第三阶段\work\meituanwaimai\src\components\Goodsflex.vue
@@ -9,15 +9,15 @@
 
 <template>
     <div class="box">
-       <div class="Goods_flex" v-for="(flex,index) in flex" :key="index">
-            <h4>{{flex.name}}</h4>
-            <img class="img_01" :src="flex.img" alt="">
+       <div class="Goods_flex">
+            <h4>马三爷烧烤店</h4>
+            <img class="img_01" src="../assets/img/tehui2.jpg" alt="">
             <img class="image" src="../assets/img/time.png" alt="">
-            <span>&nbsp;{{flex.peisong}} &nbsp; |&nbsp;</span>
+            <span>&nbsp;配送超三十分钟 &nbsp; |&nbsp;</span>
             <img class="image" src="../assets/img/review.png" alt="">
-            <span>&nbsp;{{flex.dianping}} </span>
+            <span>&nbsp; 点评高分店铺</span>
             <p>公告：本店不支持网络外卖发票，谢谢合作。</p>
-            <span class="goods_less">{{flex.manjian}}</span>
+            <span class="goods_less">首单立减14元</span>
             <img class="image_1" src="../assets/img/botton.png" alt="">
         </div>
     </div>
@@ -28,18 +28,21 @@ export default {
   name: 'fles',
   data () {
     return {
-       flex:[],
+      //  flex:[],
+      index:{},
     }
   },
    
   created(){
-    fetch(' /api/flex')
+    fetch('/api/shop/dian?sid=1')
       .then(res=>{
         return res.json();
       })
       .then(data=>{
-         this.flex=data;
-         console.log(this.flex)
+         this.index=data[0];
+        //  console.log(this.flex)
+         
+         console.log(data[0])
      })
      .catch(err=>{
        console.log(err);

@@ -48,9 +48,11 @@ export default {
         }else if(this.password !=this.relpass){
             Toast("两次密码输入不一致");
         }else{
-            axios.get('denglu?uname='+this.username+'&upass='+this.password)
+            axios.get('user/gai?uname='+this.userPhone+'&upass='+this.password)
             .then(res=>{
-                console.log(res.data);    
+                console.log(res.data);
+                
+            Toast("修改成功");    
             })
             .catch(err=>{
                 console.log(err);

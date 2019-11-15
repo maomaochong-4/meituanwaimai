@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-12 17:05:33
- * @LastEditTime: 2019-11-13 17:36:26
+ * @LastEditTime: 2019-11-15 20:49:10
  * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \第三阶段\work\meituanwaimai\src\components\xiangqing2.vue
@@ -12,14 +12,14 @@
             <p class="pp1">外卖评价</p>
             <span class="span1">7条评论 <img src="../assets/img/liebiaoyjt.png" alt=""></span>
         </div>
-        <div class="xiang5">
-            <img src="../assets/img/timg.jpg" alt="" class="img1">
-            <span class="span2">myu4621452214</span><br>
+        <div class="xiang5"  v-for="(mm,index) in mms" :key="index">
+            <img src="../assets/img/tehui3.jpg" alt="" class="img1">
+            <span class="span2">kyk4621452214</span><br>
             <span class="span2">赞了该商品</span>
-            <span class="span3">2019.11.25</span>
-            <p class="pp2"> 美味，老板也很nice，感谢</p>
+            <span class="span3">{{mm.atime}}</span>
+            <p class="pp2">{{mm.appr}}</p>
         </div>   
-        <div class="xiang5">
+        <!-- <div class="xiang5">
             <img src="../assets/img/tehui1.jpg" alt="" class="img1">
             <span class="span2">kyk4621452214</span><br>
             <span class="span2">赞了该商品</span>
@@ -32,14 +32,36 @@
             <span class="span2">赞了该商品</span>
             <span class="span3">2017.10.25</span>
             <p class="pp2">very very good</p>
-        </div>  
+        </div>   -->
         <p class="qp1">7条外卖评价
             <img src="../assets/img/liebiaoyjt.png" alt="">
         </p> 
     </div>
 </template>
 <script>
-
+    export default {
+  name: 'xinabf',
+   data () {
+    return {
+      mms:[
+      ],
+    }
+  },
+  created() {
+    fetch('/api/ping/cha?uid=1')
+      .then(res=>{
+        return res.json();
+      })
+      .then(data=>{
+          this.mms =data;
+          
+        console.log(this.mms)
+     })
+     .catch(err=>{
+       console.log(err);
+     })
+  },
+    }
 </script>
 
 <style scoped>

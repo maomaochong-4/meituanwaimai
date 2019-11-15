@@ -1,8 +1,8 @@
 <!--
  * @Author: 马川
  * @Date: 2019-11-06 20:41:40
- * @LastEditors: 马川
- * @LastEditTime: 2019-11-13 21:14:51
+ * @LastEditors: 郭涛
+ * @LastEditTime: 2019-11-15 20:26:41
  * @Description: "优惠"
  -->
 <template>
@@ -16,12 +16,7 @@
           </div>
       </div>
         <ul>
-            <li class="lia" v-for="(vip,index) in vips" :key="index">
-                <img :src="vip.img" alt="" class="vipai">
-                <p class="tehui">{{vip.name}}</p>
-                <p class="jiage">￥<span class="jiage jia">{{vip.xianjia}}</span><span class="hua">￥{{vip.yuanjia}}</span></p>
-            </li>
-          <!-- <li class="lia">
+          <li class="lia">
             <img src="../assets/vipm2.png" alt="" class="vipai">
             <p class="tehui">『特惠』荤素什锦超级</p>
             <p class="jiage">￥<span class="jiage jia">14.9</span><span class="hua">￥35.0</span></p>
@@ -35,7 +30,7 @@
             <img src="../assets/vipm4.png" alt="" class="vipai">
             <p class="tehui">『超级折扣』豆芽粉条炒肉</p>
             <p class="jiage">￥<span class="jiage jia">0.1</span><span class="hua">￥4.5</span></p>
-          </li> -->
+          </li>
         </ul>
     </div>
 </template>
@@ -52,7 +47,7 @@ export default {
     }
   },
   created() {
-    axios.get('/vips')
+    axios.get('/shop/all')
      .then(res=>{
        this.vips =res.data;
         console.log(this.vips)

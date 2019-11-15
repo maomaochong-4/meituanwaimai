@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-12 19:02:45
- * @LastEditTime: 2019-11-15 15:27:15
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2019-11-15 16:43:48
+ * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \third-staged:\ruanjian\work\meituanwaimai\src\components\Register.vue
  -->
@@ -64,13 +64,17 @@ export default {
         }else if(this.password !=this.relpass){
             Toast("两次密码输入不一致");
         }else{
-            axios.get('/user/zhu?uname='+this.username+'&phone='+this.userPhone+'&upass='+this.password)
+            axios.get('/user/zhu?uname='+this.userPhone+'&urealname='+this.username+'&upass='+this.password)
             .then(res=>{
                 console.log(res.data);    
             })
             .catch(err=>{
                 console.log(err);
             })
+            setTimeout(()=>{
+                
+                this.$router.push('/LoadPage');
+            },1100);
         }
          }
      }

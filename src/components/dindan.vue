@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-11 16:16:32
- * @LastEditTime: 2019-11-14 10:49:45
+ * @LastEditTime: 2019-11-15 22:24:44
  * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \第三阶段\work\meituanwaimai\src\components\dindan.vue
@@ -10,20 +10,20 @@
     <div id="box">   
         <div class="dindan"  v-for="(sijuan,index) in sijuans" :key="index">
             <div class="shangmian">
-                <img :src="sijuan.img" alt="" class="img1">
-                <div class="dianming">{{sijuan.name}}</div>
+                <img :src="sijuan.lpic" alt="" class="img1">
+                <div class="dianming">{{sijuan.lsname}}</div>
                 <router-link to="/GoodsList">
                     <img src="../assets/img/liebiaoyjt.png" alt="" class="img2">
                 </router-link>
             </div>
             <div class="zhongjian">
-                <span class="span1">{{sijuan.pingming}}</span>
-                <span class="span2">×{{sijuan.shuliang}}</span><br>
-                <span class="span3">{{sijuan.shijian1}} &nbsp;{{sijuan.shijian2}}</span>
-                <span class="span4">￥{{sijuan.jiage}}</span>
+                <span class="span1">{{sijuan.lveg}}</span>
+                <span class="span2">×{{sijuan.lpri}}</span><br>
+                <span class="span3">{{sijuan.beia}}&nbsp; 11:52 </span>
+                <span class="span4">￥{{sijuan.lpri}}</span>
             </div>
             <div class="xiamian">
-                <span class="span5">{{sijuan.xingzhi}}</span>
+                <span class="span5">{{sijuan.beib}}</span>
                 <input type="button" value="再来一单" class="input">
             </div>
         </div>
@@ -40,7 +40,7 @@ export default {
   },
    
   created(){
-    fetch('/api/dindans')
+    fetch('/api/addr/chading?uid=1')
       .then(res=>{
         return res.json();
       })

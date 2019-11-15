@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-09 09:49:50
- * @LastEditTime: 2019-11-14 16:04:14
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2019-11-15 23:34:34
+ * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \third-staged:\ruanjian\work\meituanwaimai\src\components\Shoppingcar_top.vue
  -->
@@ -10,129 +10,160 @@
     <div class="box">
         <div class="top">
             <i class="iconfont icon-back" @click="back()"></i>
-            <span>购物车</span>
-            <em>编辑</em>
-            <em>取消</em>
+            <span >购物车</span>
+            <em v-if="cartStatus=='account'" @click="cartStatus='edit'">编辑</em>
+            <em v-if="cartStatus=='edit'" @click="cartStatus='account'">取消</em>
         </div>
         <!-- 购物车列表 -->
-        <ul class="zizixixi">
-            <li class="goodsBox" v-for="(eat,index) in eats" :key="index">
-                <div class="change">
-                    <div class="radioBox">
-                        <input type="checkbox" name="" class="allCheckBox"><label for="check1"></label>   
+        <div class="shop">
+            <ul class="zizixixi">
+                <li class="goodsBox">
+                    <div class="change">
+                        <!-- <div class="radioBox">
+                            <input type="checkbox" class="allCheckBox">   
+                        </div> -->
+                        <div class="qingkuang">
+                            <p class="dian">东北巴福水饺（高新店）<i class="iconfont icon-jiantou"></i></p>
+                            <p class="youhui">
+                                <span>15减12</span>
+                                <span>30减20</span>
+                                <span>45减21</span>
+                            </p>
+                        </div>
                     </div>
-                    <div class="qingkuang">
-                        <p class="dian">{{eat.dianming}}<i class="iconfont icon-jiantou"></i></p>
-                        <p class="youhui">
-                            <span>{{eat.youhui1}}</span>
-                            <span>{{eat.youhui2}}</span>
-                            <span>{{eat.youhui3}}</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="goodslist">
-                    <ul>
-                        <li class="a1" >
-                            <div class="isChack">
-                                <input type="checkbox" name="" class="allCheckBox"><span></span>   
-                            </div>
-                            <div class="goodsImgBox">
-                               <img :src="eat.img" alt="">
-                            </div>
-                            <div class="goodsInfoBox">
-                                <div class="title">{{eat.title}}</div>
-                                <p class="q1">x{{eat.count}}</p>
-                                <div class="q2">
-                                    <span class="market-price">￥{{eat.yuanjia}}</span>
-                                    ￥<span class="price">{{eat.xianjia}}</span>    
+                    <div class="goodslist">
+                        <ul>
+                            <li class="a1">
+                                <div class="isChack">
+                                    <input type="checkbox" class="allCheckBox"><span></span>   
                                 </div>
+                                <div class="goodsImgBox">
+                                <img src="../assets/img/pic1.jpg" alt="">
+                                </div>
+                                <div class="goodsInfoBox">
+                                    <div class="title">优质蔬菜混合大甩卖优惠多的数不过来！</div>
+                                    <p class="q1">x1</p>
+                                    <div class="q2">
+                                        <span class="market-price">￥29.9</span>
+                                        ￥<span class="price">13.9</span>    
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="p1">
+                            <p class="q3">配送费</p>
+                            <div class="q2 q22">
+                                <span class="market-price">￥3.5</span>
+                                ￥<span class="price">1</span>   
                             </div>
-                        </li>
-                    </ul>
-                    <div class="p1">
-                        <p class="q3">配送费</p>
-                        <div class="q2 q22">
-                            <span class="market-price">￥{{eat.yuanpeisong}}</span>
-                             ￥<span class="price">{{eat.xianpeisong}}</span>   
                         </div>
-                    </div>
-                    <div class="p2">
-                        <p class="a2">
-                            <em>已优惠</em>￥<span>{{eat.zongyouhui}}</span>
-                        </p>
-                        <div class="q4">
-                            <p class="q3l">￥<em>{{eat.zongji}}</em></p> 
-                            <p class="q3r">￥<span>15起送</span></p> 
+                        <div class="p2">
+                            <p class="a2">
+                                <em>已优惠</em>￥<span>3</span>
+                            </p>
+                            <div class="q4">
+                                <router-link to="/jiesuanyemian"> 
+                                <p class="q3l">￥<em>0</em></p>
+                                    <p class="q3r"><span>去结算</span></p> 
+                                </router-link>
+                            </div>
                         </div>
-                    </div>
-                </div>        
-            </li>                                     
-        </ul>
+                    </div>        
+                </li>                                     
+            </ul>
+        </div>
+        <div class="edit" v-if="cartStatus=='edit'">
+            <div class="radioBox1">
+                <input type="checkbox" name="" class="allCheckBox">   
+            </div>
+            <span class="quanxuan">全选</span>
+            <span class="delate">删除</span>
+        </div>
+        <div class="gotopay" v-if="cartStatus=='account'">
+            <div class="radioBox1">
+                <input type="checkbox" class="allCheckBox">   
+            </div>
+            <span class="quanxuan">全选</span>
+            <div class="jiesuan">
+                <router-link to="/jiesuanyemian">
+                    <span class="jie1">一键结算</span>
+                    <em class="jie2">0个商家</em> 
+                </router-link>
+                
+            </div>
+            <div class="jia">
+                <p><span class="jia1">合计</span>￥<em>0</em></p>
+                <p><span class="jia2">总优惠</span>￥<em>0</em></p>
+            </div>
+        </div>    
     </div>
 </template>
 
 <script>
 
-import axios from 'axios';
-
+// import axios from 'axios';
+// import { Toast } from 'mint-ui';
 export default {
   name: 'ShoppingCar',
-  data () {
-    return {
-        eats:[],
-        allcheck:false
+  data () {   
+     return{
+        cartStatus:"account",
+        checkedAll: false,
     }
   },
-  created() {
-     axios.get('http://localhost:3000/cars')
-     .then(res=>{
-         let tempBooks = res.data;
-         //给每个商品增加属性 isChecked
-         for(let i in tempBooks){
-             tempBooks[i].isChecked = false;
-         }
-         this.eats = tempBooks;
-     })
-     .catch(err=>{
-         console.log(err);
-     })
-  },
-  computed:{
-      totalMoney:function () {          
-          let money = 0;
-          let isAllCheck = true;
-          for(let i in this.books){
-              if(this.books[i].isChecked){
-                  money+=this.books[i].count*this.books[i].price;
-              }else{
-                  isAllCheck = false;
-              }
-          }
-          this.allcheck = isAllCheck;
-          console.log(money);
-          return money;
-      }
-  },
-  methods:{
-    back(){
-        this.$router.go(-1);
-    },
-    checkall(){
-    //   console.log(this.allcheck);
-        console.log(event.target.checked);
-        this.books.forEach(item=>{
-            item.isChecked = event.target.checked;
-        });
+   methods: {
+        //全选
+        checkAll() {
+            this.data.forEach(item => {
+                item.checked = this.checkedAll;
+                if (item.goodsList) {
+                    item.goodsList.forEach(citem => {
+                        citem.checked = this.checkedAll;
+                    })
+                }
+            })
+        },
+        //商家全选
+        _checkAll(val, k) {
+            val.goodsList.forEach(item => {
+                item.checked = val.checked;
+            });
+            if (this.data.every(item => item.checked)) {
+                this.checkedAll = true;
+            } else {
+                this.checkedAll = false;
+            }
+
+        },
+        //商品选择框
+        handleCheck(item, index) {
+            var check = []; //保存中间层是否被选中的布尔值
+            this.data.forEach((items, index) => {
+                if (items.goodsList) {
+                    var bool = items.goodsList.every(citem => citem.checked);
+                    if (bool) {
+                        items.checked = true;
+                    } else {
+                        items.checked = false;
+                    }
+                    check.push(bool);
+                }
+            })
+            if (check.indexOf(false) == -1) {
+                this.checkedAll = true;
+            } else {
+                this.checkedAll = false;
+            }
+        },
     }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .box{
     width: 100%;
-   min-height: 6.3rem;
+    min-height: 6.3rem;
     background: #f2f2f2;
     height: 100%;
     overflow: hidden;
@@ -146,6 +177,7 @@ export default {
   left:0;
   top:0;
   background: #fafafa;
+  z-index: 1
 }
 .icon-back{
   font-size: .2rem;
@@ -165,7 +197,7 @@ export default {
 }
 .zizixixi{
     width: 96%;
-    margin:.51rem auto 0;
+    margin:.51rem auto .45rem;
 }
 .zizixixi li{
     width: 100%;
@@ -183,6 +215,10 @@ export default {
     float: left;
     margin-top: .25rem;
 }
+.radioBox1{
+    margin:.13rem 2% 0;
+    float: left;
+}
  input[type="checkbox"] {
     text-indent:0;
     margin: 0;
@@ -191,7 +227,7 @@ export default {
     text-align:center;
     display: inline-block;
     vertical-align: middle;
-    line-height: .18rem;
+    line-height: .16rem;
     position: relative;
 }
 input[type="checkbox"]::before {
@@ -207,13 +243,13 @@ input[type="checkbox"]::before {
 }
 input[type="checkbox"]:checked::before {
     content: "\2713";
-    background-color: #37b048;
-    color: #fff;
+    background-color: #fca70a;
+    color: #333333;
     position: absolute;
     top: -.022rem;
     left: -.0205rem;
     width: 100%;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     outline: none;
     border-color:#ccc;
@@ -339,7 +375,7 @@ input[type="checkbox"]:checked::before {
 }
 .q3l{
     float: left;
-    width: .45rem;
+    padding:0 .1rem;
     height:.34rem; 
     background: #fff6df;
     border-radius: .2rem 0 0 .2rem;
@@ -350,9 +386,88 @@ input[type="checkbox"]:checked::before {
     float: left;
     width: .78rem;
     height: .34rem;
-    background: #cccccc;
+    background: #fca70a;
     font-size: .12rem;
     color: white;
     border-radius: 0 .2rem .2rem 0;
+}
+.gotopay{
+  width: 100%;
+  height: .42rem;
+  /* line-height: .42rem; */
+  color: #666666;
+  position: fixed;
+  left:0;
+  bottom:0;
+  background: #ffffff;
+  border-top: 2px solid #f4f4f4;
+  z-index: 1; 
+}
+.edit{
+    width: 100%;
+    height: .45rem;
+    color: #666666;
+    position: fixed;
+    left:0;
+    bottom:0;
+    background: #ffffff;
+    border-top: 2px solid #f4f4f4;
+    z-index: 1; 
+}
+/* input{
+    width: .18rem;
+    height: .18rem;
+    margin:0 2%;
+    float: left;
+    margin-top: .13rem;
+} */
+.quanxuan{
+    font-size: .16rem;
+    color: #333333;
+    float: left;
+    margin-top: .13rem;
+}
+.jiesuan{
+    width: 1.06rem;
+    height: .42rem;
+    background: #fca70a;
+    float: right;
+   border-radius: .21rem;
+   margin:0 2%;
+   color: #333333;
+   text-align: center;
+}
+.delate{
+    height: .3rem;
+    width: .8rem;
+    float: right;
+    margin:0 2%;
+    background: #fb4e44;
+    color:#fff;
+    line-height: .3rem;
+    text-align: center;
+    margin-top: .07rem;
+    border-radius: .15rem;  
+}
+.jie1{
+    display: block;
+    font-size: .14rem;
+    margin-top: .04rem;
+}
+.jie2{
+    font-size: .09rem;
+}
+.jia{
+    float: right;
+    color: #fb4e44;
+
+}
+.jia1{
+    font-size: .14rem;
+    color: #333333;   
+}
+.jia2{
+    font-size: .11rem;
+    color: #333333;
 }
 </style>

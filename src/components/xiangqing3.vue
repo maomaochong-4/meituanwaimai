@@ -1,14 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-12 17:57:45
- * @LastEditTime: 2019-11-14 10:52:23
+ * @LastEditTime: 2019-11-15 21:21:27
  * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \第三阶段\work\meituanwaimai\src\components\xiangqing3.vue
  -->
 <template>
     <div id="box">
-        <div class="xiang3" v-for="(xiangqing,index) in xiangqings" :key="index">
+        <div class="xiang3">
             <span class="span1">{{xiangqing.ppp1}}</span>
             <div class="dpp2">
                 <div class="pp2">
@@ -38,18 +38,18 @@ export default {
   name: 'top',
   data () {
     return {
-       xiangqings:[],
+       xiangqing:[],
     }
   },
    
   created(){
-    fetch('/api/dapeis')
+    fetch('/api/shop/xiang')
       .then(res=>{
         return res.json();
       })
       .then(data=>{
-         this.xiangqings=data;
-         console.log(this.xiangqings)
+         this.xiangqing=data;
+         console.log(this.xiangqing)
      })
      .catch(err=>{
        console.log(err);

@@ -2,8 +2,8 @@
 import Axios from 'axios';
  * @Author: 马川
  * @Date: 2019-11-06 20:41:40
- * @LastEditors: 马川
- * @LastEditTime: 2019-11-14 09:49:51
+ * @LastEditors: 郭涛
+ * @LastEditTime: 2019-11-15 20:31:58
  * @Description: "到店自取"
  -->
 <template>
@@ -18,16 +18,16 @@ import Axios from 'axios';
               </li> -->
             <div class="dao_2" v-for="(daodianziqu,index) in daodianziqus" :key=index>
                 <div  class="dao_23">
-                    <img :src="daodianziqu.img" alt="" class="daom">
+                    <img :src="daodianziqu.spic" alt="" class="daom">
                 </div>
                 <div class="dao_22">
-                    <span class="dao_21">{{daodianziqu.name}}</span>
+                    <span class="dao_21">{{daodianziqu.sname}}</span>
                     <div class="dao_26">
-                        <span class="dao_24">{{daodianziqu.juli}}米</span>
-                        <span class="dao_25">省￥{{daodianziqu.jiesheng}}配送费</span>
+                        <span class="dao_24">{{daodianziqu.beia}}米</span>
+                        <span class="dao_25">省￥{{daodianziqu.beib}}配送费</span>
                     </div>
                     <div class="dao_26">
-                        <span class="dao_27">{{daodianziqu.jian}}</span><span class="dao_27 dao_28">{{daodianziqu.zhe}}</span><span class="dao_27 dao_28">{{daodianziqu.zheng}}</span>
+                        <span class="dao_27">减</span><span class="dao_27 dao_28">折</span><span class="dao_27 dao_28">返</span>
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@ export default {
     }
   },
   created() {
-        axios.get('/daodianziqus')
+        axios.get('/shop/all')
       .then(res=>{
        this.daodianziqus =res.data;
         console.log(this.daodianziqus)

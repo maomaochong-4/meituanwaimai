@@ -1,8 +1,8 @@
 <!--
  * @Author: 马川
  * @Date: 2019-11-06 20:41:40
- * @LastEditors: 马川
- * @LastEditTime: 2019-11-15 11:32:02
+ * @LastEditors: 郭涛
+ * @LastEditTime: 2019-11-15 20:39:41
  * @Description: "附近商家"
  -->
 <template>
@@ -42,23 +42,23 @@
       <ul>
         <li class="fu_1" v-for="(fujingshangjia,index) in fujingshangjias" :key="index">
             <div class="fu_left">
-              <img :src="fujingshangjia.img" alt="" class="fuj">
+              <img :src="fujingshangjia.spic" alt="" class="fuj">
             </div>
             <div class="fu_right">
-              <h3 class="fu_rh">{{fujingshangjia.name}}</h3>
+              <h3 class="fu_rh">{{fujingshangjia.sname}}</h3>
               <div class="fu_rg">
                   <div>
                     <i class="el-icon-star-off"></i>
-                    <span class="sapn">{{fujingshangjia.xingji}}</span>
-                    <span class="yuexiao">月销量{{fujingshangjia.xiaoliang}}</span>
+                    <span class="sapn">{{fujingshangjia.beib}}</span>
+                    <span class="yuexiao">月销量{{fujingshangjia.beia}}</span>
                   </div>
-                  <span class="fenzo">{{fujingshangjia.daodashijian}}分钟 {{fujingshangjia.jl}}km</span>
+                  <span class="fenzo">39分钟 2.9km</span>
               </div>
               <div class="fu_rg">
                   <div>
-                    <span class="yanse huad">起送￥{{fujingshangjia.qisong}}</span>
-                    <span class="yanse"> 配送￥{{fujingshangjia.peisong}} <span class="huadiao">￥{{fujingshangjia.yuan}}</span></span>
-                    <span class="yanse"> 人均￥{{fujingshangjia.renjun}}</span>
+                    <span class="yanse huad">起送￥{{fujingshangjia.ssend}}</span>
+                    <span class="yanse"> 配送￥{{fujingshangjia.spre}} <span class="huadiao">￥3</span></span>
+                    <span class="yanse"> 人均￥{{fujingshangjia.sav}}</span>
                   </div>
               </div>
               <div class="fu_rg">
@@ -69,10 +69,10 @@
               </div>
               <div class="fu_rg">
                   <div class="mlq">
-                    <span class="ml">{{fujingshangjia.manjian1}}</span>
-                    <span class="ml">{{fujingshangjia.manjian2}}</span>
-                    <span class="ml">{{fujingshangjia.manjian3}}</span>
-                    <span class="ml">{{fujingshangjia.manjian4}}</span>
+                      <span class="ml">10减5</span>
+                      <span class="ml">38减18</span>
+                      <span class="ml">50减7</span>
+                      <span class="ml">78减38</span>
                   </div>
               </div>
             </div>
@@ -169,7 +169,7 @@ export default {
     }
   },
   created() {
-    fetch('api/fujingshangjias')
+    fetch('/api/shop/all')
       .then(res=>{
         return res.json();
       })

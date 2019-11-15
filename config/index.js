@@ -2,7 +2,7 @@
  * @Author: 郭涛
  * @Date: 2019-11-14 19:34:12
  * @LastEditors: 郭涛
- * @LastEditTime: 2019-11-15 15:13:03
+ * @LastEditTime: 2019-11-15 19:31:21
  * @Description: 
  */
 'use strict'
@@ -19,7 +19,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target:'http://192.168.137.1:3000',
+        target: 'http://192.168.43.21:8000',
         changeOrigin: true,
         pathRewrite: {
          	 '^/api': ''
@@ -30,8 +30,8 @@ module.exports = {
 // >>>>>>> sijuan
 
     // Various Dev Server settings
-    host: '192.168.137.1', // can be overwritten by process.env.HOST
-    port: 8081, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    host: 'localhost', // can be overwritten by process.env.HOST
+    port: 8082, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,

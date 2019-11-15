@@ -1,14 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-12 16:09:26
- * @LastEditTime: 2019-11-15 15:58:40
+ * @LastEditTime: 2019-11-15 21:13:35
  * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \第三阶段\work\meituanwaimai\src\components\xiangqing1.vue
  -->
 <template>
     <div id="box">
-        <div class="xiang1" v-for="(xiangqing,index) in xiangqing" :key="index">
+        <div class="xiang1">
             <img :src="xiangqing.img" alt="" class="img111">
             <i class="el-icon-arrow-down"></i>    
             <i class="el-icon-more"></i>
@@ -26,7 +26,7 @@ export default {
   },
    
   created(){
-    fetch('/api/xiangqing')
+    fetch('/api/shop/xiang')
       .then(res=>{
         return res.json();
       })

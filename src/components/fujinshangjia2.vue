@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-11 14:51:02
- * @LastEditTime: 2019-11-14 11:48:38
+ * @LastEditTime: 2019-11-15 17:58:00
  * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \第三阶段\work\meituanwaimai\src\components\fujinshangjia.vue
@@ -12,41 +12,44 @@
        
       <ul>
         <li class="fu_1" v-for="(shangjia,index) in shangjias" :key="index">
+          
             <div class="fu_left">
-              <img :src="shangjia.img" alt="" class="fuj">
+              <img :src="shangjia.spic" alt="" class="fuj">
             </div>
-            <div class="fu_right">
-              <h3 class="fu_rh">{{shangjia.name}}</h3>
-              <div class="fu_rg">
-                  <div>
-                    <i class="el-icon-star-off"></i>
-                    <span class="sapn">{{shangjia.xingji}}</span>
-                    <span class="yuexiao">月销量{{shangjia.xiaoliang}}</span>
-                  </div>
-                  <span class="fenzo">{{shangjia.daodashijian}}分钟 {{shangjia.jl}}km</span>
+            <router-link to="/GoodsList">
+              <div class="fu_right">
+                <h3 class="fu_rh">{{shangjia.sname}}</h3>
+                <div class="fu_rg">
+                    <div>
+                      <i class="el-icon-star-off"></i>
+                      <span class="sapn">{{shangjia.beib}}</span>
+                      <span class="yuexiao">月销量{{shangjia.beia}}</span>
+                    </div>
+                    <span class="fenzo">39分钟 2.9km</span>
+                </div>
+                <div class="fu_rg">
+                    <div>
+                      <span class="yanse huad">起送￥{{shangjia.ssend}}</span>
+                      <span class="yanse"> 配送￥{{shangjia.spre}} <span class="huadiao">￥3</span></span>
+                      <span class="yanse"> 人均￥{{shangjia.sav}}</span>
+                    </div>
+                </div>
+                <div class="fu_rg">
+                    <div>
+                      <i class="el-icon-box"></i>
+                      <span class="yanse">{{shangjia.sveg}}</span>
+                    </div>
+                </div>
+                <div class="fu_rg">
+                    <div class="mlq">
+                      <span class="ml">10减5</span>
+                      <span class="ml">38减18</span>
+                      <span class="ml">50减7</span>
+                      <span class="ml">78减38</span>
+                    </div>
+                </div>
               </div>
-              <div class="fu_rg">
-                  <div>
-                    <span class="yanse huad">起送￥{{shangjia.qisong}}</span>
-                    <span class="yanse"> 配送￥{{shangjia.peisong}} <span class="huadiao">￥3</span></span>
-                    <span class="yanse"> 人均￥{{shangjia.renjun}}</span>
-                  </div>
-              </div>
-              <div class="fu_rg">
-                  <div>
-                    <i class="el-icon-box"></i>
-                    <span class="yanse">{{shangjia.leixing}}</span>
-                  </div>
-              </div>
-              <div class="fu_rg">
-                  <div class="mlq">
-                    <span class="ml">{{shangjia.manjian1}}</span>
-                    <span class="ml">{{shangjia.manjian2}}</span>
-                    <span class="ml">{{shangjia.manjian3}}</span>
-                    <span class="ml">{{shangjia.manjian4}}</span>
-                  </div>
-              </div>
-            </div>
+            </router-link>
         </li>
       </ul>
   </div>
@@ -62,7 +65,7 @@ export default {
   },
    
   created(){
-    fetch(' /api/fujingshangjias')
+    fetch('/api/shop/all')
       .then(res=>{
         return res.json();
       })

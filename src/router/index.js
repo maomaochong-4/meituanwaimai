@@ -2,7 +2,7 @@
  * @Author: 郭涛
  * @Date: 2019-11-14 19:34:12
  * @LastEditors: 郭涛
- * @LastEditTime: 2019-11-15 15:22:53
+ * @LastEditTime: 2019-11-15 22:14:17
  * @Description: 
  */
 
@@ -26,6 +26,7 @@ import huiyuan from '@/pages/huiyuan'
 import xiangqingye from '@/pages/xiangqingye'
 
 import huiyuansouwei from '@/pages/huiyuansouwei'
+import xingdizhi from '@/pages/xingdizhi'
 
 Vue.use(Router)
 
@@ -55,9 +56,9 @@ let router= new Router({
       path: '/dindan',
       name: 'dindan',
       component: dindan,
-       meta:{
-        requireAuth:true
-      }
+      //  meta:{
+      //   requireAuth:true
+      // }
     },
     {
       path: '/GoodsList',
@@ -123,6 +124,11 @@ let router= new Router({
       path: '/ZujianPage',
       name: 'ZujianPage',
       component: ZujianPage
+    },
+    {
+      path: '/xingdizhi',
+      name: 'xingdizhi',
+      component: xingdizhi
     }
   ]
 })

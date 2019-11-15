@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-12 16:01:33
- * @LastEditTime: 2019-11-12 17:21:09
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2019-11-15 21:43:21
+ * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \third-staged:\ruanjian\work\meituanwaimai\src\components\Dizhi.vue
  -->
@@ -10,8 +10,11 @@
   <div class="box">
         <div class="top"> 
             <i class="iconfont icon-back" @click="back()"></i>
-            <span>选择收货地址</span>
+            
+                <span>选择收货地址</span>
+           <router-link to="/xingdizhi">
             <em>新增地址</em>
+             </router-link>
         </div>
         <div class="sousuo">
             <i class="iconfont icon-wodedizhi"></i>

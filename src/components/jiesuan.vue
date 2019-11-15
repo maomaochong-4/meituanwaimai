@@ -1,8 +1,8 @@
 <!--
  * @Author: 马川
  * @Date: 2019-11-06 20:41:40
- * @LastEditors: 马川
- * @LastEditTime: 2019-11-13 21:10:52
+ * @LastEditors: 郭涛
+ * @LastEditTime: 2019-11-15 22:28:42
  * @Description: "导航栏"
  -->
 <template>
@@ -27,7 +27,7 @@
         </div>
      </div>
      <div class="buttom1">
-        <div class="buttom2">
+        <!-- <div class="buttom2">
               <span class="top2">贡茶（庆阳路）</span>
               <span class="buttom5">美团快送</span>
         </div>
@@ -46,52 +46,52 @@
                  <p class="right_4">￥13</p>
                </div>
             </div>
-        </div>
-        <!-- <div class="buttom6">
-            <div class="left_1">
-                <img src="../assets/jiao1.png" alt="">
-            </div>
-            <div class="right_1">
-               <div class="right_2">
-                  <p>奥利奥奶茶</p>
-                  <p class="right_5">+常温+多糖</p>
-                  <p class="right_5">x1</p>
-               </div>
-               <div class="right_3">
-                 <p class="right_4">￥13</p>
-               </div>
-            </div>
-        </div>
-        <div class="buttom6">
-            <div class="left_1">
-                <img src="../assets/jiao1.png" alt="">
-            </div>
-            <div class="right_1">
-               <div class="right_2">
-                  <p>奥利奥奶茶</p>
-                  <p class="right_5">+常温+多糖</p>
-                  <p class="right_5">x1</p>
-               </div>
-               <div class="right_3">
-                 <p class="right_4">￥13</p>
-               </div>
-            </div>
-        </div>
-        <div class="buttom6">
-            <div class="left_1">
-                <img src="../assets/jiao1.png" alt="">
-            </div>
-            <div class="right_1">
-               <div class="right_2">
-                  <p>奥利奥奶茶</p>
-                  <p class="right_5">+常温+多糖</p>
-                  <p class="right_5">x1</p>
-               </div>
-               <div class="right_3">
-                 <p class="right_4">￥13</p>
-               </div>
-            </div>
         </div> -->
+        <div class="buttom6">
+            <div class="left_1">
+                <img src="../assets/jiao1.png" alt="">
+            </div>
+            <div class="right_1">
+               <div class="right_2">
+                  <p>奥利奥奶茶</p>
+                  <p class="right_5">+常温+多糖</p>
+                  <p class="right_5">x1</p>
+               </div>
+               <div class="right_3">
+                 <p class="right_4">￥13</p>
+               </div>
+            </div>
+        </div>
+        <div class="buttom6">
+            <div class="left_1">
+                <img src="../assets/jiao1.png" alt="">
+            </div>
+            <div class="right_1">
+               <div class="right_2">
+                  <p>奥利奥奶茶</p>
+                  <p class="right_5">+常温+多糖</p>
+                  <p class="right_5">x1</p>
+               </div>
+               <div class="right_3">
+                 <p class="right_4">￥13</p>
+               </div>
+            </div>
+        </div>
+        <div class="buttom6">
+            <div class="left_1">
+                <img src="../assets/jiao1.png" alt="">
+            </div>
+            <div class="right_1">
+               <div class="right_2">
+                  <p>奥利奥奶茶</p>
+                  <p class="right_5">+常温+多糖</p>
+                  <p class="right_5">x1</p>
+               </div>
+               <div class="right_3">
+                 <p class="right_4">￥13</p>
+               </div>
+            </div>
+        </div>
         <hr>
         <div class="baozhuang">
             <div class="baozhuang1">

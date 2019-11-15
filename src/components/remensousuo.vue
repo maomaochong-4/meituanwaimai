@@ -1,8 +1,8 @@
 <!--
  * @Author: 马川
  * @Date: 2019-11-06 20:41:40
- * @LastEditors: 马川
- * @LastEditTime: 2019-11-13 21:12:02
+ * @LastEditors: 郭涛
+ * @LastEditTime: 2019-11-15 22:13:31
  * @Description: "搜索框"
  -->
 <template>
@@ -11,8 +11,7 @@
           <p>搜索发现</p>
           <hr>
           <section>
-              <span class="box-sou1" v-for="(sousuo,index) in sousuos" :key="index">{{sousuo.type}}</span>
-              <!-- <span class="box-sou1">外婆印象</span>
+              <span class="box-sou1">外婆印象</span>
               <span class="box-sou1">肯德基</span>
               <span class="box-sou1">奶茶</span>
               <span class="box-sou1">王菊</span>
@@ -24,7 +23,7 @@
               <span class="box-sou1">大盘鸡</span>
               <span class="box-sou1">麦当劳</span>
               <span class="box-sou1">汉堡</span>
-              <span class="box-sou1">星巴克</span> -->
+              <span class="box-sou1">星巴克</span>
           </section>
           <div class="box-sou2">
               <span class="box-sou3">历史记录</span>
@@ -52,7 +51,7 @@ export default {
     }
   },
   created() {
-    axios.get('/sousuos')
+    axios.get('/shop/sou?sname=菜')
       .then(res=>{
        this.sousuos =res.data;
         console.log(this.sousuos)

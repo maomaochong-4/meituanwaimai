@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-11 21:50:50
- * @LastEditTime: 2019-11-15 15:00:44
+ * @LastEditTime: 2019-11-15 16:49:43
  * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \third-staged:\ruanjian\work\meituanwaimai\src\components\Zhuce.vue
@@ -50,15 +50,16 @@ export default {
         if(this.userPhone=="" || this.password==""){
             Toast('手机号或密码不能为空');
         }else{
-            axios.get('/denglu?phone='+this.userPhone+'&password='+this.password)
+            axios.get('/user/deng?uname='+this.userPhone+'&upass='+this.password)
             .then(res=>{
-                console.log(res.data);    
+                console.log(res.data);  
             })
+              
             .catch(err=>{
                 console.log(err);
             })
             setTimeout(()=>{
-                
+                 Toast("登陆成功")
                 this.$router.push('/');
             },1100);
         }

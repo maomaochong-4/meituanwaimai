@@ -1,8 +1,8 @@
 <!--
  * @Author: 马川
  * @Date: 2019-11-06 20:41:40
- * @LastEditors: 马川
- * @LastEditTime: 2019-11-13 21:29:43
+ * @LastEditors: 郭涛
+ * @LastEditTime: 2019-11-15 20:10:25
  * @Description: "推荐"
  -->
 <template>
@@ -11,67 +11,14 @@
           <ul>
             <li v-for="(haodian,index) in haodians" :key="index">
               <div class="imgs">
-                <img :src="haodian.img" alt="" class="wu">
+                <img :src="haodian.dpic" alt="" class="wu">
                 </div>
                 <div class="zi">
-                    <h2 class="pq">{{haodian.name}}</h2>
+                    <h2 class="pq">{{haodian.dsname}}</h2>
                     <sapn class="pq qp">根据你看过的店推荐<i class="el-icon-circle-close"></i></sapn>
                 </div>
             </li>
-            <!-- <li>
-                <div class="imgs">
-                <img src="../assets/wu1.png" alt="" class="wu">
-                </div>
-                <div class="zi">
-                    <h2 class="pq">王菊菜馆(高新路)</h2>
-                    <sapn class="pq qp">根据你看过的店推荐<i class="el-icon-circle-close"></i></sapn>
-                </div>
-            </li>
-            <li>
-                <div class="imgs">
-                    <img src="../assets/wu2.png" alt="" class="wu">
-                </div>
-                <div class="zi">
-                    <h2 class="pq">毛乡情湖南土家菜</h2>
-                    <sapn class="pq qp">根据你看过的店推荐<i class="el-icon-circle-close"></i></sapn>
-                </div>
-            </li>
-            <li>
-                <div class="imgs">
-                    <img src="../assets/wu3.png" alt="" class="wu">
-                </div>
-                <div class="zi">
-                    <h2 class="pq">挚念粉(国宾店)</h2>
-                    <sapn class="pq qp">根据你看过的店推荐<i class="el-icon-circle-close"></i></sapn>
-                </div>
-            </li>
-            <li>
-                <div class="imgs">
-                      <img src="../assets/wu4.png" alt="" class="wu">
-                  </div>
-                  <div class="zi">
-                      <h2 class="pq">苏福记(紫薇臻品店)</h2>
-                      <sapn class="pq qp">根据你看过的店推荐<i class="el-icon-circle-close"></i></sapn>
-                  </div>
-            </li>
-            <li>
-                <div class="imgs">
-                      <img src="../assets/wu5.png" alt="" class="wu">
-                  </div>
-                  <div class="zi">
-                      <h2 class="pq">川人冒.大院香锅.冒菜</h2>
-                      <sapn class="pq qp">根据你看过的店推荐<i class="el-icon-circle-close"></i></sapn>
-                  </div>
-            </li>
-            <li>
-                <div class="imgs">
-                      <img src="../assets/wu6.png" alt="" class="wu">
-                  </div>
-                  <div class="zi">
-                      <h2 class="pq">正派川湘菜馆</h2>
-                      <sapn class="pq qp">根据你看过的店推荐<i class="el-icon-circle-close"></i></sapn>
-                  </div>
-            </li> -->
+            
           </ul>
       </div>
   </div>
@@ -89,7 +36,7 @@ export default {
     }
   },
   created() {
-      axios.get('/haoxuans')
+      axios.get('/shop/cha?sid=1')
       .then(res=>{
        this.haodians =res.data;
         console.log(this.haoxuans)

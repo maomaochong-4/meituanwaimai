@@ -1,14 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-12 17:05:33
- * @LastEditTime: 2019-11-14 10:52:31
+ * @LastEditTime: 2019-11-15 21:17:36
  * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \第三阶段\work\meituanwaimai\src\components\xiangqing2.vue
  -->
 <template>
     <div id="box">
-        <div class="xiang4" v-for="(xiangqing,index) in xiangqing" :key="index">
+        <div class="xiang4">
             <p>商品详情</p>
             <span>(不点主食不配送)</span><br>
             <span>主料：</span>{{xiangqing.zhonglei}}<br>
@@ -32,7 +32,7 @@ export default {
   },
    
   created(){
-    fetch('/api/xiangqing')
+    fetch('/api/shop/xiang')
       .then(res=>{
         return res.json();
       })

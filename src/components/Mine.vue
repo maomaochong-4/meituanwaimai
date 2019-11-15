@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-11 17:45:43
- * @LastEditTime: 2019-11-11 21:43:02
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2019-11-15 09:16:52
+ * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \third-staged:\ruanjian\work\meituanwaimai\src\components\Mine.vue
  -->
@@ -12,27 +12,27 @@
         <li class="zichan">
             <p class="title">我的资产</p>
             <div class="content">
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-hongbao"></i><em>红包</em>
                     <div class="you">
                         <span>5</span><b>个未使用</b>
                     </div>    
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-daijinjuanguanli"></i><em>代金券</em>
                     <div class="you">
                          <span>3</span><b>张未使用</b>
                     </div>    
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-guanlijintie"></i><em>津贴</em>
                     <div class="you"><span>20</span><b>元可叠加满减</b></div>   
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-wode-qianbaocopy"></i><em>我的钱包</em>
                     <div class="you"><b>绑卡立减</b></div>    
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-jieqian"></i><em>借钱</em>
                     <div class="you"><b>最高10万</b></div>   
                 </a>
@@ -41,19 +41,19 @@
         <li class="zichan">
             <p class="title">我的功能</p>
             <div class="gongneng">
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-wodedizhi"></i><em>我的地址</em>   
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-wodezuji"></i><em>我的足迹</em> 
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-wodeshoucang"></i><em>我的收藏</em>  
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-jilu"></i><em>答谢记录</em>
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-wodepingjia"></i><em>我的评价</em>  
                 </a>
             </div>
@@ -61,13 +61,13 @@
          <li class="zichan">
             <p class="title">我的服务</p>
             <div class="gongneng">
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-bangzhu"></i><em>帮助与反馈</em>   
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-kefuzhongxin"></i><em>客服中心</em> 
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-lajifenleishidian"></i><em>分类助手</em>  
                 </a>
             </div>
@@ -75,22 +75,22 @@
         <li class="zichan">
             <p class="title">更多推荐</p>
             <div class="gongneng">
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-yaoqingyoujiang"></i><em>邀请有奖</em>   
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-ruzhu"></i><em>商家入驻</em> 
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-qishouzhaomu"></i><em>骑手招募</em>  
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon--woyaohezuo-me"></i><em>我要合作</em>
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-gongyi"></i><em>美团公益</em>  
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-lvsenengliang"></i><em>能量捐赠</em>  
                 </a>
             </div>

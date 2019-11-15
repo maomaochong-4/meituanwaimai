@@ -1,37 +1,4 @@
 <!--
-<<<<<<< HEAD
- * @Author: your name
- * @Date: 2019-11-11 14:51:02
- * @LastEditTime: 2019-11-14 11:48:38
- * @LastEditors: 郭涛
- * @Description: In User Settings Edit
- * @FilePath: \第三阶段\work\meituanwaimai\src\components\fujinshangjia.vue
- -->
-
-<template>
-  <div class="box">
-       
-      <ul>
-        <li class="fu_1" v-for="(shangjia,index) in shangjias" :key="index">
-            <div class="fu_left">
-              <img :src="shangjia.img" alt="" class="fuj">
-            </div>
-            <div class="fu_right">
-              <h3 class="fu_rh">{{shangjia.name}}</h3>
-              <div class="fu_rg">
-                  <div>
-                    <i class="el-icon-star-off"></i>
-                    <span class="sapn">{{shangjia.xingji}}</span>
-                    <span class="yuexiao">月销量{{shangjia.xiaoliang}}</span>
-                  </div>
-                  <span class="fenzo">{{shangjia.daodashijian}}分钟 {{shangjia.jl}}km</span>
-              </div>
-              <div class="fu_rg">
-                  <div>
-                    <span class="yanse huad">起送￥{{shangjia.qisong}}</span>
-                    <span class="yanse"> 配送￥{{shangjia.peisong}} <span class="huadiao">￥3</span></span>
-                    <span class="yanse"> 人均￥{{shangjia.renjun}}</span>
-=======
  * @Author: 马川
  * @Date: 2019-11-06 20:41:40
  * @LastEditors: 马川
@@ -92,53 +59,24 @@
                     <span class="yanse huad">起送￥{{fujingshangjia.qisong}}</span>
                     <span class="yanse"> 配送￥{{fujingshangjia.peisong}} <span class="huadiao">￥{{fujingshangjia.yuan}}</span></span>
                     <span class="yanse"> 人均￥{{fujingshangjia.renjun}}</span>
->>>>>>> machuan
                   </div>
               </div>
               <div class="fu_rg">
                   <div>
                     <i class="el-icon-box"></i>
-<<<<<<< HEAD
-                    <span class="yanse">{{shangjia.leixing}}</span>
-=======
                     <span class="yanse">{{fujingshangjia.leixing}}</span>
->>>>>>> machuan
                   </div>
               </div>
               <div class="fu_rg">
                   <div class="mlq">
-<<<<<<< HEAD
-                    <span class="ml">{{shangjia.manjian1}}</span>
-                    <span class="ml">{{shangjia.manjian2}}</span>
-                    <span class="ml">{{shangjia.manjian3}}</span>
-                    <span class="ml">{{shangjia.manjian4}}</span>
-=======
                     <span class="ml">{{fujingshangjia.manjian1}}</span>
                     <span class="ml">{{fujingshangjia.manjian2}}</span>
                     <span class="ml">{{fujingshangjia.manjian3}}</span>
                     <span class="ml">{{fujingshangjia.manjian4}}</span>
->>>>>>> machuan
                   </div>
               </div>
             </div>
         </li>
-<<<<<<< HEAD
-      </ul>
-  </div>
-</template>
-
-<script>
-export default {
-  name: 'top',
-  data () {
-    return {
-       shangjias:[],
-    }
-  },
-   
-  created(){
-    fetch(' /api/fujingshangjias')
-=======
         <!-- <li class="fu_1">
             <div class="fu_left">
               <img src="../assets/fuj1.png" alt="" class="fuj">
@@ -232,26 +170,17 @@ export default {
   },
   created() {
     fetch('api/fujingshangjias')
->>>>>>> machuan
       .then(res=>{
         return res.json();
       })
       .then(data=>{
-<<<<<<< HEAD
-         this.shangjias=data;
-         console.log(this.shangjias)
-=======
           this.fujingshangjias =data;
           
         console.log(this.fujingshangjias)
->>>>>>> machuan
      })
      .catch(err=>{
        console.log(err);
      })
-<<<<<<< HEAD
-  }
-=======
   },
     mounted () {//给window添加一个滚动滚动监听事件
     window.addEventListener('scroll', this.handleScroll)
@@ -272,17 +201,10 @@ export default {
       destroyed () {//离开该页面需要移除这个监听的事件
         window.removeEventListener('scroll', this.handleScroll)
       },
->>>>>>> machuan
 }
 </script>
 
 <style scoped>
-<<<<<<< HEAD
-    .dao{
-        width: 92%;
-        height: .55rem;
-        margin:.2rem auto 0
-=======
     .dao-12{
       width: 100%;
       height: .55rem;
@@ -292,7 +214,6 @@ export default {
         width: 92%;
         height: .55rem;
         margin:.2rem auto 0;
->>>>>>> machuan
     }
     .dao-1{
         font-size: 22px;
@@ -303,10 +224,7 @@ export default {
         height: .4rem;
         margin: 0 auto .2rem;
         background: red;
-<<<<<<< HEAD
-=======
         
->>>>>>> machuan
     }
    .fu_1{
      width: 94%;
@@ -394,10 +312,6 @@ export default {
      margin: 0 auto;
      display: flex; 
      align-items: center;
-<<<<<<< HEAD
-     justify-content: space-around
-   }
-=======
      justify-content: space-around;
      position: sticky;
      /* z-index: 2; */
@@ -410,7 +324,6 @@ export default {
      position: sticky;
     box-sizing: border-box;
    } */
->>>>>>> machuan
    .cuxiao_1{
      width: .8rem;
      height: .3rem;
@@ -430,11 +343,8 @@ export default {
    .manc{
      width: 3.6rem;
    }
-<<<<<<< HEAD
-=======
    .fu_5{
      width: 100%;
      height: .6rem;
    }
->>>>>>> machuan
 </style>

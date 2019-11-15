@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-07 21:31:59
- * @LastEditTime: 2019-11-13 10:30:03
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2019-11-14 21:00:55
+ * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \第三阶段\work\meituanwaimai\src\pages\liebiao.vue
  -->
@@ -14,7 +14,7 @@
         <jrtcTuijian></jrtcTuijian>
         <lbFenlei></lbFenlei>
         <lbnxTbdw></lbnxTbdw>
-        <fujinshangjia></fujinshangjia>
+        <fujinshangjia2></fujinshangjia2>
     </div>
 </template>
 <script>
@@ -24,7 +24,7 @@ import lbTehui from '../components/lbTehui';
 import jrtcTuijian from '../components/jrtcTuijian';
 import lbFenlei from '../components/lbFenlei';
 import lbnxTbdw from '../components/lbnxTbdw';
-import fujinshangjia from '../components/fujinshangjia';
+import fujinshangjia2 from '../components/fujinshangjia2';
 export default {
   name: 'back',
   data () {
@@ -33,7 +33,7 @@ export default {
     }
   },
   components:{
-      liebiaosousuo,zhaopan,lbTehui,jrtcTuijian,lbFenlei,lbnxTbdw,fujinshangjia
+      liebiaosousuo,zhaopan,lbTehui,jrtcTuijian,lbFenlei,lbnxTbdw,fujinshangjia2
   }
 }
 </script>

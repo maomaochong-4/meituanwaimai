@@ -3,8 +3,8 @@
  * @version: v1.0.0
  * @Author: 田江
  * @Date: 2019-11-06 14:35:10
- * @LastEditors: 马川
- * @LastEditTime: 2019-11-14 15:04:46
+ * @LastEditors: 郭涛
+ * @LastEditTime: 2019-11-15 16:05:09
  -->
 <template>
     <div class="box">
@@ -14,31 +14,44 @@
                   -->
                   <!-- <router-link to="fenleiright"> -->
                        <li>
-                            <p class="box1">美食</p>
-                            <p><span>1980</span></p>
+                           <router-link to="/liebiao">
+                                <p class="box1">美食</p>
+                                <p><span>1980</span></p>
+                           </router-link>
                         </li>
                   <!-- </router-link> -->
                   <!-- <router-link to="fenleiright1"> -->
                         <li>
-                            <p class="box1">甜点饮品</p>
-                            <p><span>1980</span></p>
+                           <router-link to="/liebiao">
+                                <p class="box1">甜点饮品</p>
+                                <p><span>1980</span></p>
+                           </router-link>
                         </li> 
                   <!-- </router-link> -->
                   <li>
-                      <p class="box1">超市便利</p>
-                      <p><span>1980</span></p>
+                           <router-link to="/liebiao">
+                                <p class="box1">超市便利</p>
+                                <p><span>1980</span></p>
+                           </router-link>
                   </li>
                   <li>
-                      <p class="box1">蔬菜水果</p>
-                      <p><span>1980</span></p>
+                        <router-link to="/liebiao">
+                            <p class="box1">蔬菜水果</p>
+                            <p><span>1980</span></p>
+                        </router-link>
                    </li>
                   <li>
-                      <p class="box1">送药上门</p>
-                      <p><span>1980</span></p>
+                        <router-link to="/liebiao">
+                            <p class="box1">送药上门</p>
+                            <p><span>1980</span></p>
+                        </router-link>
                   </li>
                   <li>
-                      <p class="box1">浪漫鲜花</p>
-                      <p><span>1980</span></p>
+                           <router-link to="/liebiao">
+                                <p class="box1">浪漫鲜花</p>
+                                <p><span>1980</span></p>
+                            </router-link>
+
                   </li>
                   <li>
                       <p class="box1">早餐</p>

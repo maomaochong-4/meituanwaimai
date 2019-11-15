@@ -1,18 +1,21 @@
 <!--
  * @Author: 马川
  * @Date: 2019-11-06 20:41:40
- * @LastEditors: 马川
- * @LastEditTime: 2019-11-11 14:16:28
+ * @LastEditors: 郭涛
+ * @LastEditTime: 2019-11-15 16:13:59
  * @Description: "顶部"
  -->
 <template>
   <div class="box">
       <div class="box_1">
-          <div class="box_left">
-              <img src="../assets/dingwei.png" alt="" class="box_left1">
-              <span> 立人科技园</span>
-              <img src="../assets/youjiantou.png" alt="" class="box_left2">
+              <div class="box_left">
+                        <img src="../assets/dingwei.png" alt="" class="box_left1">
+                    <router-link to="/DizhiPage">    
+                        <span> 立人科技园</span>
+                     </router-link>
+                        <img src="../assets/youjiantou.png" alt="" class="box_left2"> 
           </div>
+        
           <div class="box_right">
               <img src="../assets/xiaoxi.png" alt="" class="box_right1">
           </div>

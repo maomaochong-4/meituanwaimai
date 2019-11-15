@@ -1,17 +1,20 @@
 <!--
  * @Author: 马川
  * @Date: 2019-11-06 20:41:40
- * @LastEditors: 马川
- * @LastEditTime: 2019-11-13 21:09:00
+ * @LastEditors: 郭涛
+ * @LastEditTime: 2019-11-15 16:10:42
  * @Description: "导航栏"
  -->
 <template>
   <div class="box">
       <div class="box2">
             <ul>
-              <li v-for="(leibie,index) in leibies" :key="index">
-                <img :src="leibie.img" alt="">
-                {{leibie.name}}
+              
+                <li v-for="(leibie,index) in leibies" :key="index">
+                    <router-link to="/liebiao">
+                      <img :src="leibie.img" alt="">
+                      {{leibie.name}}
+                    </router-link>
               </li>
               <!-- <li> <img src="../assets/tb1.png" alt="">美食</li>
               <li><img src="../assets/tb2.png" alt="">甜点饮品</li>

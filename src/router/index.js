@@ -1,8 +1,8 @@
 /*
  * @Author: 郭涛
  * @Date: 2019-11-14 19:34:12
- * @LastEditors: 马川
- * @LastEditTime: 2019-11-15 14:19:32
+ * @LastEditors: 郭涛
+ * @LastEditTime: 2019-11-15 15:22:53
  * @Description: 
  */
 
@@ -68,9 +68,6 @@ let router= new Router({
       path: '/huiyuan',
       name: 'huiyuan',
       component: huiyuan,
-       meta:{
-        requireAuth:true
-      }
     },
     {
       path: '/xiangqingye',
@@ -147,7 +144,7 @@ router.beforeEach((to,from,next)=>{
       if(localStorage.getItem('username')==null){
           next('/ZujianPage');
       }else{
-          next();
+          next('/dindan');
       }
   }else{
      next();

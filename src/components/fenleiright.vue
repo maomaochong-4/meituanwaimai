@@ -3,8 +3,8 @@
  * @version: v1.0.0
  * @Author: 田江
  * @Date: 2019-11-06 14:35:10
- * @LastEditors: 马川
- * @LastEditTime: 2019-11-14 15:05:14
+ * @LastEditors: 郭涛
+ * @LastEditTime: 2019-11-15 16:07:38
  -->
 <template>
     <div class="mmm">
@@ -16,15 +16,19 @@
         <div class="right-2">
           <ul>
           <li>
-            <div class="right-3">
-              <img src="../assets/fenlei1.png" alt="">
-            </div>
-            <div class="box3">
-              <p class="box1">全部美食</p>
-              <p><span class="box6">1980</span></p>
-            </div>
+            <router-link to="/liebiao">
+                <div class="right-3">
+                <img src="../assets/fenlei1.png" alt="">
+              </div>
+              <div class="box3">
+                <p class="box1">全部美食</p>
+                <p><span class="box6">1980</span></p>
+              </div>
+            </router-link>
           </li>
             <li>
+            <router-link to="/liebiao">
+
             <div class="right-3">
               <img src="../assets/fenlei2.png" alt="">
             </div>
@@ -32,8 +36,12 @@
               <p class="box1">饺子混沌</p>
               <p><span class="box6">49</span></p>
             </div>
+            </router-link>
+
           </li>
             <li>
+            <router-link to="/liebiao">
+
             <div class="right-3">
               <img src="../assets/fenlei3.png" alt="">
             </div>
@@ -41,8 +49,12 @@
               <p class="box1">快餐便当</p>
               <p><span class="box6">36</span></p>
             </div>
+            </router-link>
+
           </li>
            <li>
+            <router-link to="/liebiao">
+
             <div class="right-3">
               <img src="../assets/fenlei4.png" alt="">
             </div>
@@ -50,6 +62,8 @@
               <p class="box1">汉堡薯条</p>
               <p><span class="box6">45</span></p>
             </div>
+            </router-link>
+
           </li>
             <li>
             <div class="right-3">

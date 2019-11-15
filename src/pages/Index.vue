@@ -2,7 +2,7 @@
  * @Author: 马川
  * @Date: 2019-11-06 20:41:40
  * @LastEditors: 马川
- * @LastEditTime: 2019-11-13 20:56:36
+ * @LastEditTime: 2019-11-15 10:57:37
  * @Description: 
  -->
 <template>
@@ -18,7 +18,7 @@
       <Vipm></Vipm>
       <daodianziqu></daodianziqu>
       <fujinshangjia></fujinshangjia>
-      <i class="el-icon-shopping-cart-2"></i>
+      <router-link to="/ShoppingCarPage"><i class="el-icon-shopping-cart-2"></i></router-link>
       <img src="../assets/zhineng.png" alt="" class="zhi">
       <Footer></Footer>
   </div>

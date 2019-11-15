@@ -2,21 +2,21 @@
  * @Author: 马川
  * @Date: 2019-11-06 20:41:40
  * @LastEditors: 马川
- * @LastEditTime: 2019-11-10 19:36:23
+ * @LastEditTime: 2019-11-15 10:46:41
  * @Description: "导航栏"
  -->
 <template>
   <div class="box">
       <div class="box1">
-          <span>冒菜</span>
+          <router-link to="/Fenleim"><span>冒菜</span></router-link>
           <span>|</span>
-          <span>酸辣粉</span>
+          <router-link to="/Fenleim"><span>酸辣粉</span></router-link>
           <span>|</span>
-          <span>必胜客</span>
+          <router-link to="/Fenleim"><span>必胜客</span></router-link>
           <span>|</span>
-          <span>小竹签烤肉</span>
+          <router-link to="/Fenleim"><span>小竹签烤肉</span></router-link>
           <span>|</span>
-          <span>coco奶茶</span>
+          <router-link to="/Fenleim"><span>coco奶茶</span></router-link>
       </div>
   </div>
 </template>

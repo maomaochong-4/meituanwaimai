@@ -1,15 +1,15 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-11 16:52:13
- * @LastEditTime: 2019-11-11 17:40:56
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2019-11-15 11:07:40
+ * @LastEditors: 马川
  * @Description: In User Settings Edit
  * @FilePath: \third-staged:\ruanjian\work\meituanwaimai\src\components\Denglu.vue
  -->
 <template>
   <div class="box">
       <img src="../assets/img/touxiang.png" alt="">
-      <span class="title">登录/注册</span>
+      <router-link to="/LoadPage"><span class="title">登录/注册</span></router-link>
       <div class="a1">
           <i class="iconfont icon-shezhi"></i>
           <i class="iconfont icon-ziyuan"></i>

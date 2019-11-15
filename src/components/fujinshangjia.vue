@@ -2,7 +2,7 @@
  * @Author: 马川
  * @Date: 2019-11-06 20:41:40
  * @LastEditors: 马川
- * @LastEditTime: 2019-11-13 22:13:35
+ * @LastEditTime: 2019-11-15 11:32:02
  * @Description: "附近商家"
  -->
 <template>
@@ -208,7 +208,6 @@ export default {
     .dao-12{
       width: 100%;
       height: .55rem;
-      background: white;
     }
     .dao{
         width: 92%;
@@ -220,10 +219,9 @@ export default {
         color: #232323
     }
     .fu{
-        width: 96%;
+        width: 100%;
         height: .4rem;
         margin: 0 auto .2rem;
-        background: red;
         
     }
    .fu_1{
@@ -307,7 +305,7 @@ export default {
      color: #ff6259
    }
    .cuxiao{
-     width: 96%;
+     width: 100%;
      height: .5rem;
      margin: 0 auto;
      display: flex; 

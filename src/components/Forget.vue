@@ -19,7 +19,7 @@
                 <input type="button" value="修改">
             </div>
             <div class="huan">
-                <span>去登录</span>
+                <router-link to="/LoadPage"><span>去登录</span></router-link>
                 <em>遇到问题</em>
             </div>    
         </div>       

@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-11 21:50:50
- * @LastEditTime: 2019-11-14 18:04:44
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2019-11-15 15:00:44
+ * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \third-staged:\ruanjian\work\meituanwaimai\src\components\Zhuce.vue
  -->
@@ -24,8 +24,8 @@
                 <input type="button" value="登录" @touchstart="loginCheck">
             </div>
             <div class="huan">
-                <span>去注册</span>
-                <em>忘记密码？</em>
+                <router-link to="/RegisterPage"><span>去注册</span></router-link>
+                <router-link to="/ForgetPage"><em>忘记密码？</em></router-link>
             </div>    
         </div>       
   </div>
@@ -50,14 +50,20 @@ export default {
         if(this.userPhone=="" || this.password==""){
             Toast('手机号或密码不能为空');
         }else{
-            axios.get('http://localhost:3000/denglu?phone='+this.userPhone+'&password='+this.password)
+            axios.get('/denglu?phone='+this.userPhone+'&password='+this.password)
             .then(res=>{
                 console.log(res.data);    
             })
             .catch(err=>{
                 console.log(err);
             })
+            setTimeout(()=>{
+                
+                this.$router.push('/');
+            },1100);
         }
+       
+
     }  
 }
 }

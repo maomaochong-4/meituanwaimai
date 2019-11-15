@@ -2,7 +2,7 @@
  * @Author: 马川
  * @Date: 2019-11-06 20:41:40
  * @LastEditors: 马川
- * @LastEditTime: 2019-11-13 18:12:09
+ * @LastEditTime: 2019-11-15 10:52:01
  * @Description: "分类"
  -->
 <template>
@@ -19,19 +19,19 @@
                             <img :src="fenlei.img" alt="" class="boxf1_1">
                             {{fenlei.name}}
                         </li> -->
-                      <router-link to="/Sousuoye"><li><img src="../assets/fl1.png" alt="" class="boxf1_1">校园优选</li></router-link>
-                      <router-link to="/Sousuoye"><li><img src="../assets/fl2.png" alt="" class="boxf1_1">下午茶</li></router-link>
-                      <router-link to="/Sousuoye"><li><img src="../assets/fl3.png" alt="" class="boxf1_1">面包蛋糕</li></router-link>
-                      <router-link to="/Sousuoye"><li><img src="../assets/fl4.png" alt="" class="boxf1_1">川湘菜</li></router-link>
-                      <router-link to="/Sousuoye"><li><img src="../assets/fl5.png" alt="" class="boxf1_1">津贴联盟</li></router-link>
+                      <router-link to="/Fenleim"><li><img src="../assets/fl1.png" alt="" class="boxf1_1">校园优选</li></router-link>
+                      <router-link to="/Fenleim"><li><img src="../assets/fl2.png" alt="" class="boxf1_1">下午茶</li></router-link>
+                      <router-link to="/Fenleim"><li><img src="../assets/fl3.png" alt="" class="boxf1_1">面包蛋糕</li></router-link>
+                      <router-link to="/Fenleim"><li><img src="../assets/fl4.png" alt="" class="boxf1_1">川湘菜</li></router-link>
+                      <router-link to="/Fenleim"><li><img src="../assets/fl5.png" alt="" class="boxf1_1">津贴联盟</li></router-link>
                   </ul>
               </li>
               <li class="boxf1">
                   <ul class="boxf12">
-                      <router-link to="/Sousuoye"><li><img src="../assets/fl6.png" alt="" class="boxf1_1">减免配送费</li></router-link>
-                      <router-link to="/Sousuoye"><li><img src="../assets/fl7.png" alt="" class="boxf1_1">到店自取</li></router-link>
-                      <router-link to="/Sousuoye"><li><img src="../assets/fl8.png" alt="" class="boxf1_1">跑腿代购</li></router-link>
-                      <router-link to="/Sousuoye"><li><img src="../assets/fl9.png" alt="" class="boxf1_1">美团专送</li></router-link>
+                      <router-link to="/Fenleim"><li><img src="../assets/fl6.png" alt="" class="boxf1_1">减免配送费</li></router-link>
+                      <router-link to="/Fenleim"><li><img src="../assets/fl7.png" alt="" class="boxf1_1">到店自取</li></router-link>
+                      <router-link to="/Fenleim"><li><img src="../assets/fl8.png" alt="" class="boxf1_1">跑腿代购</li></router-link>
+                      <router-link to="/Fenleim"><li><img src="../assets/fl9.png" alt="" class="boxf1_1">美团专送</li></router-link>
                       <router-link to="/Fenleim">
                           <li><img src="../assets/fl10.png" alt="" class="boxf1_1">全部分类</li>
                     </router-link>

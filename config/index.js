@@ -1,8 +1,8 @@
 /*
  * @Author: 郭涛
- * @Date: 2019-11-07 20:30:55
+ * @Date: 2019-11-14 19:34:12
  * @LastEditors: 郭涛
- * @LastEditTime: 2019-11-15 10:03:02
+ * @LastEditTime: 2019-11-15 14:48:40
  * @Description: 
  */
 'use strict'
@@ -19,13 +19,15 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://localhost:3000',
+        target:'http://localhost:3000',
         changeOrigin: true,
         pathRewrite: {
          	 '^/api': ''
         }
       }
     },
+// =======
+// >>>>>>> sijuan
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

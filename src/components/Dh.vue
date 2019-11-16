@@ -2,7 +2,7 @@
  * @Author: 马川
  * @Date: 2019-11-06 20:41:40
  * @LastEditors: 郭涛
- * @LastEditTime: 2019-11-15 20:36:38
+ * @LastEditTime: 2019-11-16 10:56:59
  * @Description: "导航栏"
  -->
 <template>
@@ -35,16 +35,16 @@ export default {
       ],
     }
   },
-  created() {
-    axios.get('/leibies')
-      .then(res=>{
-       this.leibies =res.data;
-        console.log(this.leibies)
-      })
-     .catch(err=>{
-       console.log(err);
-     })
-  },
+  // created() {
+  //   axios.get('/leibies')
+  //     .then(res=>{
+  //      this.leibies =res.data;
+  //       console.log(this.leibies)
+  //     })
+  //    .catch(err=>{
+  //      console.log(err);
+  //    })
+  // },
 }
 </script>
 

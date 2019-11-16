@@ -1,8 +1,8 @@
 <!--
  * @Author: 马川
  * @Date: 2019-11-06 20:41:40
- * @LastEditors: 马川
- * @LastEditTime: 2019-11-15 10:52:01
+ * @LastEditors: 郭涛
+ * @LastEditTime: 2019-11-16 11:01:24
  * @Description: "分类"
  -->
 <template>
@@ -50,20 +50,20 @@ export default {
       ],
     }
   },
-  created() {
-    fetch('http://localhost:3000/fenleis')
-      .then(res=>{
-        return res.json();
-      })
-      .then(data=>{
-          this.fenleis =data;
+  // created() {
+  //   fetch('http://localhost:3000/fenleis')
+  //     .then(res=>{
+  //       return res.json();
+  //     })
+  //     .then(data=>{
+  //         this.fenleis =data;
           
-        console.log(this.fenleis)
-     })
-     .catch(err=>{
-       console.log(err);
-     })
-  },
+  //       console.log(this.fenleis)
+  //    })
+  //    .catch(err=>{
+  //      console.log(err);
+  //    })
+  // },
 }
 </script>
 

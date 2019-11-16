@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-09 09:49:50
- * @LastEditTime: 2019-11-15 23:34:34
+ * @LastEditTime: 2019-11-16 08:55:52
  * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \third-staged:\ruanjian\work\meituanwaimai\src\components\Shoppingcar_top.vue
@@ -111,7 +111,11 @@ export default {
         checkedAll: false,
     }
   },
-   methods: {
+
+   methods: { 
+       back(){
+                this.$router.go(-1);
+             },
         //全选
         checkAll() {
             this.data.forEach(item => {
@@ -155,6 +159,7 @@ export default {
                 this.checkedAll = false;
             }
         },
+        
     }
   }
 </script>

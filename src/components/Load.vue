@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-11 21:50:50
- * @LastEditTime: 2019-11-15 16:49:43
+ * @LastEditTime: 2019-11-16 11:48:17
  * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \third-staged:\ruanjian\work\meituanwaimai\src\components\Zhuce.vue
@@ -59,7 +59,7 @@ export default {
                 console.log(err);
             })
             setTimeout(()=>{
-                 Toast("登陆成功")
+                 Toast("登录成功")
                 this.$router.push('/');
             },1100);
         }

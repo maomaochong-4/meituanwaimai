@@ -2,7 +2,7 @@
  * @Author: 马川
  * @Date: 2019-11-06 20:41:40
  * @LastEditors: 郭涛
- * @LastEditTime: 2019-11-15 22:28:42
+ * @LastEditTime: 2019-11-16 11:17:30
  * @Description: "导航栏"
  -->
 <template>
@@ -10,7 +10,7 @@
      <div class="jie1">
           <div class="jie">
               <div class="left">
-                <i class="el-icon-back"></i>
+                <i class="el-icon-back" @click="back()"></i>
               </div>
               <div class="right">
                 提交订单
@@ -161,16 +161,21 @@ export default {
       ],
     }
   },
-  created() {
-    axios.get('/tijiao')
-      .then(res=>{
-       this.jies =res.data;
-        console.log(this.jies)
-      })
-     .catch(err=>{
-       console.log(err);
-     })
-  },
+  // created() {
+  //   axios.get('/tijiao')
+  //     .then(res=>{
+  //      this.jies =res.data;
+  //       console.log(this.jies)
+  //     })
+  //    .catch(err=>{
+  //      console.log(err);
+  //    })
+  // },
+   methods:{
+    back(){
+        this.$router.go(-1);
+      }
+  }
 }
 </script>
 

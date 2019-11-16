@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-12 16:09:26
- * @LastEditTime: 2019-11-15 21:13:35
+ * @LastEditTime: 2019-11-16 08:47:13
  * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \第三阶段\work\meituanwaimai\src\components\xiangqing1.vue
@@ -10,7 +10,7 @@
     <div id="box">
         <div class="xiang1">
             <img :src="xiangqing.img" alt="" class="img111">
-            <i class="el-icon-arrow-down"></i>    
+            <i class="el-icon-arrow-down" @click=back()></i>    
             <i class="el-icon-more"></i>
             <router-link to="/ShoppingCarPage"><i class="el-icon-shopping-cart-2"></i></router-link>
         </div>
@@ -23,6 +23,11 @@ export default {
     return {
        xiangqing:[],
     }
+  },
+   methods:{
+      back(){
+          this.$router.go(-1);
+      }
   },
    
   created(){

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-11 21:50:50
- * @LastEditTime: 2019-11-15 21:39:14
+ * @LastEditTime: 2019-11-16 08:43:33
  * @LastEditors: 郭涛
  * @Description: In User Settings Edit
  * @FilePath: \third-staged:\ruanjian\work\meituanwaimai\src\components\Zhuce.vue
@@ -100,7 +100,7 @@ export default {
         margin-left: .1rem;
     }
     .el-icon-bell{
-        margin-left: .85rem;
+        margin-left: .65rem;
     }
     .middlea{
         width: 95%;

@@ -2,7 +2,7 @@
  * @Author: 郭涛
  * @Date: 2019-11-14 19:34:12
  * @LastEditors: 郭涛
- * @LastEditTime: 2019-11-15 22:14:17
+ * @LastEditTime: 2019-11-16 11:46:30
  * @Description: 
  */
 
@@ -35,7 +35,7 @@ let router= new Router({
     {
       path: '/',
       name: 'Index',
-      component: Index
+      component: Index,
     },
     {
       path: '/index.html',
@@ -46,6 +46,10 @@ let router= new Router({
       path: '/Sousuoye',
       name: 'Sousuoye',
       component: Sousuoye,
+      beforeEnter(to,from,next){
+        // console.log("/BookDetailPage这个路径守卫了");
+        next();
+     }
     },
     {
       path: '/liebiao',
@@ -56,9 +60,9 @@ let router= new Router({
       path: '/dindan',
       name: 'dindan',
       component: dindan,
-      //  meta:{
-      //   requireAuth:true
-      // }
+       meta:{
+        requireAuth:true
+      }
     },
     {
       path: '/GoodsList',
@@ -69,6 +73,9 @@ let router= new Router({
       path: '/huiyuan',
       name: 'huiyuan',
       component: huiyuan,
+      meta:{
+        requireAuth:true
+      }
     },
     {
       path: '/xiangqingye',
@@ -146,11 +153,11 @@ router.beforeEach((to,from,next)=>{
 
   if(to.meta.requireAuth){
       console.log('前置守卫');
-      console.log(localStorage.getItem('username'));
-      if(localStorage.getItem('username')==null){
+      console.log(localStorage.getItem('userPhone'));
+      if(localStorage.getItem('userPhone')==null){
           next('/ZujianPage');
       }else{
-          next('/dindan');
+          next();
       }
   }else{
      next();
